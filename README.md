@@ -1,5 +1,5 @@
 <p align="center">
-  <h1>Projeto Ferrari</h1>
+  <h1 align="center">Projeto Ferrari</h1>
 </p>
 
 <p align="center">
