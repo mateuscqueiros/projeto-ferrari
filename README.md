@@ -1,4 +1,6 @@
-# Projeto Ferrari Hcode Lab
+<p align="center">
+  Projeto Ferrai
+</p>
 
 <p align="center">
   <img width="460" height="300" src="assets/images/ferrari-logo.svg">
