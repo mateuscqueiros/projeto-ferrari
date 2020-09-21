@@ -1,6 +1,6 @@
 #Projeto Ferrari Hcode Lab
 
-![Ferrari]("assets/images/ferrari-logo.svg")
+![Ferrari](assets/images/ferrari-logo.svg)
 
 Este projeto foi desenvolvido por Mateus Queirós durante o curso Web Starter do [https://www.hcodelab.com.br/](Hcode Lab) criado e mantido pela [https://hcode.com.br/](Hcode Treinamentos).
 
