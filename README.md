@@ -21,4 +21,4 @@ npm run sass
 
  O objetivo deste repositório não é oferecer uma cópia a ser utilizada pelos alunos ao invés de fazerem eles mesmos sua própria versão. No entanto, pode ser usado como revisão após cada aula.
 
- A partir da aula Header HTMl, todos os commits seguiram o cronograma das aulas, então se quiser revisar seu código acompanhe os commits do repositório.
+ A partir da aula Header HTML, todos os commits seguiram o cronograma das aulas, então se quiser revisar seu código acompanhe os commits do repositório.
