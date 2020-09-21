@@ -1,12 +1,12 @@
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family: "Open Sanss";
+    font-family: "Open Sans";
     font-style: normal;
     font-weight: 400;
 }
 
-body, div, article, aside, footer, header, main, nav, section, ul, ol, li, div, button, figure, picture{
+body, div, article, aside, footer, header, main, nav, section, ul, ol, li, div, nav, button, figure, picture{
     display: flex;
 }
 
@@ -21,7 +21,7 @@ hr {
         background-color: var(--gray-3);
         height: 1px;
         width: calc(100% - 2em);
-        margin: 3em 0;
+        margin: 15px 0;
         border: none;
         align-self: center;
     }

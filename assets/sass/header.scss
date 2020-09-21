@@ -1,0 +1,198 @@
+#header {
+    min-width: 320px;
+    width: 100%;
+    background-color: var(--gray-5);
+    position: relative;
+    z-index: 3;
+    height: 60px;
+
+    .italy {
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        border: none;
+        background-color: var(--white);
+        border-top: var(--green) 6px solid;
+        border-bottom: var(--red) 6px solid;
+        height: 18px;
+        margin: 0;
+    }
+
+    .logo {
+        position: absolute;
+        transition: all 1s ease-in-out;
+        top: 15px;
+        width: 72px;
+        right: calc(50vw - 36px);
+        z-index: 5;
+    }
+
+    .menu {
+        transition: right .5s ease-out;
+        width: 300px;
+        height: 100vh;
+        padding-bottom: 50px;
+        background-color: var(--gray-7);
+        position: fixed;
+        right: -300px;
+        top: 0;
+        z-index: 4;
+        flex-direction: column;
+        justify-content: space-between;
+
+        hr {
+            width: 100%;
+            border-bottom: none;
+            border-color: var(--black-10);
+            margin: 0;
+        }
+
+        &.logged {
+            nav {
+                ul {
+                    li {
+                        &.divider { 
+                            display: flex;
+                        }
+                        &.hide-guest {
+                            display: flex;
+                        }
+                    }
+                }
+            }
+            .footer {
+                >div {
+                    display: flex;
+                }
+                > a.btn-register {
+                    display: none;
+                }
+            }
+        }
+
+        nav {
+            flex-direction: column;
+
+            ul {
+                margin: 0;
+                padding: 0;
+                margin-top: 249px;
+                width: 100%;
+                flex-direction: column;
+
+                li {
+                    padding: 14px 0;
+                    list-style: none;
+                    justify-content: center;
+
+                    a {
+                        text-decoration: none;
+                        color: var(--gray-0);
+                    }
+                    &.hide-guest, &.divider {
+                        display: none;
+                    }
+                    hr {
+                        margin: 15px 0;
+                    }
+                }
+            }
+        }
+
+        .footer {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+            > div {
+                display: none;
+                padding: 15px;
+                width: 100%;
+                align-items: center;
+
+                picture {
+                    margin-right: 10px;
+                    img {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                    }
+                }
+                > div {
+                    flex-direction: column;
+                    flex: 1;
+                }
+                a {
+                    color: var(--dark-0);
+                    text-decoration: none;
+                    font-size: 16px;
+
+                    small {
+                        color: var(--gray-2);
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        .btn-register {
+            margin: 20px;
+            width: calc(300px - 40px);
+            min-width: 130px;
+            border: none;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+            outline: none;
+            cursor: pointer;
+            background-color: var(--green);
+            color: var(--white);
+            border-radius: 6px;
+
+            &:hover {
+                background-color: var(--green-hover);
+            }
+
+            &:active {
+                background-color: var(--green-active);
+            }
+        }
+    }
+    button {
+        background: none;
+        border: none;
+        outline: none;
+        padding: 13px;
+    }
+    #btn-open, #btn-close {
+        position: absolute;
+        right: 0;
+    }
+    
+}
+
+.open-menu {
+    overflow: hidden;
+
+    #header {
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: var(--dark-1);
+            z-index: 4;
+        }
+        .menu {
+            right: 0;
+        }
+        .logo {
+            right: 114px;
+        }
+    }
+}
