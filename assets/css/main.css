@@ -235,9 +235,17 @@ hr.divider {
   text-decoration: none;
   outline: none;
   cursor: pointer;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--black);
   background-color: var(--green);
   color: var(--white);
-  border-radius: 6px;
+}
+#header .menu .btn-register:hover {
+  background-color: var(--black-10);
+}
+#header .menu .btn-register:active {
+  background-color: var(--green-75);
 }
 #header .menu .btn-register:hover {
   background-color: var(--green-hover);
