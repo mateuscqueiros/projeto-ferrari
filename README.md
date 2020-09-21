@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img width="100" src="assets/images/ferrari-logo.svg">
+  <img width="200" src="assets/images/ferrari-logo.svg">
 </p>
 
 Este projeto foi desenvolvido por Mateus Queirós durante o curso Web Starter do [Hcode Lab](https://www.hcodelab.com.br) criado e mantido pela [Hcode Treinamentos](https://hcode.com.br/).
