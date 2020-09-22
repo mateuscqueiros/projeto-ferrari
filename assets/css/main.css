@@ -136,7 +136,6 @@ header.page-title hr {
   flex-direction: column;
   height: calc(100vh - 140px);
   overflow: auto;
-  margin-bottom: 80px;
 }
 .page .page-title {
   margin: var(--space);
@@ -149,6 +148,7 @@ header.page-title hr {
   color: var(--white);
   justify-content: center;
   align-items: center;
+  margin-top: 18px;
 }
 .page > header h1 {
   font-size: 23px;
@@ -156,6 +156,7 @@ header.page-title hr {
   text-transform: uppercase;
 }
 .page > main {
+  margin-bottom: 80px;
   flex-direction: column;
 }
 .page > main .toast {
@@ -242,6 +243,16 @@ header.page-title hr {
   background-color: var(--black-active);
 }
 
+@media (min-width: 1200px) {
+  .page > header {
+    justify-content: flex-start;
+    min-height: 160px;
+    padding-left: 185px;
+  }
+  .page > header h1 {
+    font-size: 32px;
+  }
+}
 .toast {
   position: relative;
   height: 80px;
@@ -283,6 +294,9 @@ form {
   flex-direction: column;
   width: 100%;
   padding: 0 var(--space);
+}
+form .fields {
+  flex-direction: column;
 }
 form .field {
   position: relative;
@@ -364,6 +378,26 @@ form button:active {
   background-color: var(--green-active);
 }
 
+@media (min-width: 1200px) {
+  form {
+    max-width: 400px;
+  }
+  form .fields {
+    flex-direction: row;
+  }
+  form .fields .field {
+    margin-right: var(--space);
+  }
+  form .fields .field:last-child {
+    margin-right: 0;
+  }
+  form .fields .field:last-child textarea {
+    min-height: 250px;
+  }
+  form button {
+    max-width: 340px;
+  }
+}
 #header {
   min-width: 320px;
   width: 100%;

@@ -3,6 +3,10 @@ form {
     width: 100%;
     padding: 0 var(--space);
 
+    .fields {
+        flex-direction: column;
+    }
+
     .field {
         position: relative;
         flex-direction: column;
@@ -57,5 +61,31 @@ form {
 
     button {
         @include button-green;
+    }
+}
+
+@media (min-width: 1200px) {
+    form {
+        max-width: 400px;
+
+        .fields {
+            flex-direction: row;
+
+            .field {
+                margin-right: var(--space);
+
+                &:last-child {
+                    margin-right: 0;
+
+                    textarea {
+                        min-height: 250px;
+                    }
+                }
+            }
+        }
+
+        button {
+            max-width: 340px;
+        }
     }
 }
