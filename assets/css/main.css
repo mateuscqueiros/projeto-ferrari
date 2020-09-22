@@ -586,6 +586,30 @@ form button:active {
   background-color: var(--green-active);
 }
 
+@media (min-width: 1200px) {
+  .calendar {
+    max-width: 992px;
+  }
+  .calendar .month {
+    margin: var(--space) 0;
+  }
+  .calendar .month h2 {
+    font-size: 44px;
+  }
+  .calendar .month .btn-today {
+    display: flex;
+  }
+  .calendar .weekdays li {
+    font-size: 21px;
+    font-weight: bold;
+  }
+  .calendar .days {
+    grid-template-rows: repeat(5, calc(992px / 7));
+  }
+  .calendar .days li {
+    font-size: 38px;
+  }
+}
 #header {
   min-width: 320px;
   width: 100%;

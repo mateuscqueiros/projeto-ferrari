@@ -93,3 +93,32 @@
         }
     }
 }
+
+@media (min-width: 1200px) {
+    .calendar {
+        max-width: 992px;
+
+        .month {
+            margin: var(--space) 0;
+            h2 {
+                font-size: 44px;
+            }
+            .btn-today {
+                display: flex;
+            }
+           
+        }
+        .weekdays {
+            li {
+                font-size: 21px;
+                font-weight: bold;
+            }
+        }
+        .days {
+            grid-template-rows: repeat(5, calc(992px / 7));
+            li {
+                font-size: 38px;
+            }
+        }
+    }
+}
