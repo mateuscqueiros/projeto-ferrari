@@ -97,7 +97,7 @@ body {
   background-color: var(--bg-color);
 }
 body > main {
-  min-height: calc(100vh - 247px);
+  min-height: calc(100vh - 400px);
 }
 
 hr.divider {
@@ -109,6 +109,11 @@ hr.divider {
   align-self: center;
 }
 
+@media (min-width: 1200px) {
+  body > main {
+    min-height: calc(100vh - 341px);
+  }
+}
 #header {
   min-width: 320px;
   width: 100%;
@@ -431,6 +436,24 @@ hr.divider {
 #footer p {
   font-weight: bold;
   font-size: 18px;
+}
+
+@media (min-width: 1200px) {
+  #footer {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 0;
+  }
+  #footer .columns {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #footer .columns .links {
+    display: flex;
+  }
+  #footer .columns ul li a:hover {
+    color: var(--white);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

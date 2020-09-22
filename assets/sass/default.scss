@@ -16,7 +16,7 @@ body {
     background-color: var(--bg-color);
 
     > main {
-        min-height: calc(100vh - 247px);
+        min-height: calc(100vh - 400px);
     }
 }
 
@@ -28,5 +28,13 @@ hr {
         margin: 15px 0;
         border: none;
         align-self: center;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        > main {
+            min-height: calc(100vh - 341px);
+        }
     }
 }
