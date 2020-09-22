@@ -76,7 +76,6 @@
   --danger-color: #721C24;
   --space: 20px;
   --border-radius: 5px;
-  --space: 20px;
 }
 
 * {
@@ -114,6 +113,257 @@ hr.divider {
     min-height: calc(100vh - 341px);
   }
 }
+header.page-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+header.page-title h1, header.page-title h2, header.page-title h3, header.page-title h4, header.page-title h5, header.page-title h6 {
+  color: var(--green);
+  margin: 0;
+  font-size: 32px;
+  font-weight: 600;
+}
+header.page-title hr {
+  width: 68px;
+  border: none;
+  border-top: 4px solid var(--red);
+  margin: 10px 0;
+}
+
+.page {
+  flex-direction: column;
+  height: calc(100vh - 140px);
+  overflow: auto;
+  margin-bottom: 80px;
+}
+.page .page-title {
+  margin: var(--space);
+  width: calc(100% - calc(var(--space) * 2));
+}
+.page > header {
+  width: 100%;
+  min-height: 130px;
+  background-color: var(--black);
+  color: var(--white);
+  justify-content: center;
+  align-items: center;
+}
+.page > header h1 {
+  font-size: 23px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.page > main {
+  flex-direction: column;
+}
+.page > main .toast {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+.page > main .toast.open {
+  transform: translateY(-80px);
+}
+.page footer.fixed {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: var(--gray-12);
+  height: 80px;
+  left: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space);
+  z-index: 4;
+}
+.page footer.fixed button, .page footer.fixed a {
+  min-width: 130px;
+  border: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: transparent;
+  color: var(--black);
+  background-color: var(--gray-3);
+  color: var(--gray-0);
+}
+.page footer.fixed button:hover, .page footer.fixed a:hover {
+  background-color: var(--black-10);
+}
+.page footer.fixed button:active, .page footer.fixed a:active {
+  background-color: var(--green-75);
+}
+.page footer.fixed button:hover, .page footer.fixed a:hover {
+  background-color: var(--gray-hover);
+}
+.page footer.fixed button:active, .page footer.fixed a:active {
+  background-color: var(--black-active);
+}
+.page footer.fixed button[type=submit], .page footer.fixed a.black {
+  min-width: 130px;
+  border: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: transparent;
+  color: var(--black);
+  background-color: var(--black);
+  color: var(--white);
+}
+.page footer.fixed button[type=submit]:hover, .page footer.fixed a.black:hover {
+  background-color: var(--black-10);
+}
+.page footer.fixed button[type=submit]:active, .page footer.fixed a.black:active {
+  background-color: var(--green-75);
+}
+.page footer.fixed button[type=submit]:hover, .page footer.fixed a.black:hover {
+  background-color: var(--black-hover);
+}
+.page footer.fixed button[type=submit]:active, .page footer.fixed a.black:active {
+  background-color: var(--black-active);
+}
+
+.toast {
+  position: relative;
+  height: 80px;
+  width: 100%;
+  align-items: center;
+  padding: var(--space);
+  border: 1px solid transparent;
+  transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.toast .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 16px;
+  margin: 0;
+  background: none;
+  border: none;
+  font-size: 32px;
+  transition: 0.3s;
+  color: var(--black-50);
+  min-width: 50px;
+  margin: 15px;
+}
+.toast .close:hover {
+  color: var(--black-75);
+}
+.toast.success {
+  color: var(--success-color);
+  border-color: var(--success-border);
+  background-color: var(--success);
+}
+.toast.danger {
+  color: var(--danger-color);
+  border-color: var(--danger-border);
+  background-color: var(--danger);
+}
+
+form {
+  flex-direction: column;
+  width: 100%;
+  padding: 0 var(--space);
+}
+form .field {
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: var(--space);
+}
+form .field label {
+  color: var(--gray-3);
+  font-size: 14px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  transition: color 0.3s ease-in-out;
+  z-index: 2;
+}
+form .field input, form .field textarea, form .field select {
+  border: var(--gray-3) 1px solid;
+  line-height: 1.5em;
+  padding: 10px;
+  padding-top: 33px;
+  font-size: 16px;
+  color: var(--dark-0);
+  outline: none;
+  border-radius: var(--border-radius);
+  position: relative;
+  z-index: 1;
+  top: 0;
+  transition: border-color 0.2s ease-in-out;
+  background-color: transparent;
+}
+form .field input:focus, form .field textarea:focus, form .field select:focus {
+  border-color: var(--green);
+}
+form .field input:focus + label, form .field textarea:focus + label, form .field select:focus + label {
+  color: var(--green);
+}
+form .field input[readonly], form .field textarea[readonly], form .field select[readonly] {
+  color: var(--black);
+  border: none;
+  font-weight: bold;
+  font-size: 22px;
+  text-transform: uppercase;
+  padding-bottom: 0;
+}
+form .field input[readonly] + label, form .field textarea[readonly] + label, form .field select[readonly] + label {
+  color: var(--);
+  text-transform: uppercase;
+}
+form button {
+  min-width: 130px;
+  border: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: transparent;
+  color: var(--black);
+  background-color: var(--green);
+  color: var(--white);
+}
+form button:hover {
+  background-color: var(--black-10);
+}
+form button:active {
+  background-color: var(--green-75);
+}
+form button:hover {
+  background-color: var(--green-hover);
+}
+form button:active {
+  background-color: var(--green-active);
+}
+
 #header {
   min-width: 320px;
   width: 100%;
@@ -244,7 +494,7 @@ hr.divider {
   text-decoration: none;
   outline: none;
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: var(--border-radius);
   background: transparent;
   color: var(--black);
   background-color: var(--green);
