@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ferrari - hcode Lab</title>
+    <title>Ferrari - Hcode Lab</title>
     <link rel="apple-touch-icon" sizes="57x57" href="assets/images/apple-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="60x60" href="assets/images/apple-icon-60x60.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-icon-72x72.png" />
@@ -85,7 +85,160 @@
         <hr class="italy" />
     </header>
 
-    <main></main>
+    <main id="home">
+
+        <header>
+
+            <ul>
+                <li>#3,9 L V8</li>
+                <li>720 HP</li>
+                <li>#3,9 L v8</li>
+            </ul>
+
+            <h1>SF90 Stradale</h1>
+            <a href="#home">Detalhes</a>
+
+        </header>
+
+        <section class="gallery">
+
+            <figure>
+                <picture>
+                    <source srcset="assets/images/ferrari-amarela.webp" type="image/webp" />
+                    <img src="assets/images/ferrari-amarela.png" alt="Ferrari Amarela" />
+                </picture>
+                <figcaption>
+                    <h2>Esportivas</h2>
+                    <p>Ferrari F1000</p>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <picture>
+                    <source srcset="assets/images/ferrari-interior.webp" type="image/webp" />
+                    <img src="assets/images/ferrari-interior.png" alt="Ferrari Amarela" />
+                </picture>
+                <figcaption>
+                    <h2>Esportivas</h2>
+                    <p>Ferrari F1000</p>
+                </figcaption>
+            </figure>
+
+            <figure>
+                <picture>
+                    <source srcset="assets/images/ferrari-azul.webp" type="image/webp" />
+                    <img src="assets/images/ferrari-azul.png" alt="Ferrari Amarela" />
+                </picture>
+                <figcaption>
+                    <h2>Esportivas</h2>
+                    <p>Ferrari F1000</p>
+                </figcaption>
+            </figure>
+
+        </section>
+
+        <section id="service">
+            <h2>Agende seu serviço <small>Como funciona</small></h2>
+
+            <div>
+
+                <div class="icons">
+
+                    <figure>
+                        <img src="assets/images/calendar.svg" alt="Escolha Data e Hora">
+                        <figcaption>Escolha data e hora</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="assets/images/tools.svg" alt="Escolha o Serviço">
+                        <figcaption>Escolha data e hora</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="assets/images/payments.svg" alt="Pague Online">
+                        <figcaption>Escolha data e hora</figcaption>
+                    </figure>
+
+                </div>
+
+                <a href="schedules-new.html" class="btn">Agendar Serviço</a>
+
+            </div>
+
+            <img src="assets/images/services.svg" alt="Serviços">
+        </section>
+
+        <section id="contact">
+            <h2>Entre em Contato</h2>
+
+            <section>
+
+                <form action="">
+
+                    <header class="page-title">
+                        <h2>Formulário</h2>
+                        <hr />
+                        <p>
+                            Envie o formulário abaixo para entrar em contato conosco.
+                        </p>
+                        <div class="alert danger">
+                            Preencha todos os campos
+                        </div>
+                    </header>
+
+                    <div class="fields">
+                        <div class="field">
+                            <input type="text" name="name" id="name" />
+                            <label for="name">Nome Completo</label>
+                        </div>
+
+                        <div class="field">
+                            <input type="text" name="email" id="email" />
+                            <label for="email">E-mail</label>
+                        </div>
+
+                        <div class="field">
+                            <textarea type="text" name="message" id="message"></textarea>
+                            <label for="message">Mensagem</label>
+                        </div>
+                        <div class="actions">
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </div>
+
+                </form>
+
+                <div id="map"></div>
+
+            </section>
+
+            <hr class="divider" />
+            <ul class="contacts">
+                <li>
+                    <img src="assets/images/icon-google-place.svg" alt="Icon">
+                    <p class="title">Our Headquarters</p>
+                    <p>Modena, Itália</p>
+                </li>
+                <li>
+                    <img src="assets/images/icon-phone.svg" alt="Icon">
+                    <p class="title">Speak to us</p>
+                    <p>(123) 456789</p>
+                </li>
+                <li>
+                    <img src="assets/images/icon-skype.svg" alt="Icon">
+                    <p class="title">Make a video call</p>
+                    <p>Ferrari on Skype</p>
+                </li>
+                <li>
+                    <img src="assets/images/icon-twitter.svg" alt="Icon">
+                    <p class="title">Follow on Twitter</p>
+                    <p>2.3k Followers</p>
+                </li>
+            </ul>
+
+        </section>
+
+    </main>
 
     <footer id="footer">
         <button type="button">
@@ -105,7 +258,7 @@
                 </ul>
                 <ul>
                     <li class="title">Contato</li>
-                    <li>E-mail:&nbsp; <a href="mailto:support@ferrari.it"></a>support@ferrari.it</li>
+                    <li>E-mail:&nbsp; <a href="mailto:support@ferrari.it">support@ferrari.it</a></li>
                     <li class="social">
                         <a href="#"><img src="assets/images/facebook.svg" alt="Facebook"></a>
                         <a href="#"><img src="assets/images/twitter.svg" alt="Twitter"></a>
