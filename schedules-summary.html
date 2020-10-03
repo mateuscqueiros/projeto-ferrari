@@ -46,7 +46,7 @@
                         <path d="M0,0H24V24H0Z" fill="none" />
                         <path
                             d="M19,6.41,17.59,5,12,10.59,6.41,5,5,6.41,10.59,12,5,17.59,6.41,19,12,13.41,17.59,19,19,17.59,13.41,12Z" />
-                        </svg>
+                    </svg>
                 </button>
                 <ul>
                     <li><a href="index.html#home">Home</a></li>
@@ -87,98 +87,124 @@
         <hr class="italy" />
     </header>
 
-    <section class="page blue" id="schedules-new">
+    <section id="schedules-services" class="page blue">
 
         <header>
-            <h1>Escolha a Data</h1>
+            <h1>Resumo do pedido</h1>
+            <small>Confira os detalhes do pedido</small>
         </header>
 
         <main>
 
-            <div class="calendar">
+            <form action="">
 
-                <div class="month">
+                <div class="options">
 
-                    <button type="button" class="btn-today">Hoje</button>
+                    <form class="hide">
 
-                    <h2>Junho 2020</h2>
+                        <hr />
 
-                    <nav>
-                        <button type="button" class="btn-prev">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="7.41" height="12" viewBox="0 0 7.41 12">
-                                <path d="M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z"
-                                    transform="translate(16 18) rotate(180)" fill="#9a9a99" /></svg>
-                        </button>
-                        <button type="button" class="btn-next">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="7.41" height="12" viewBox="0 0 7.41 12">
-                                <path d="M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z" transform="translate(-8.59 -6)"
-                                    fill="#9a9a99" /></svg>
-                        </button>
-                    </nav>
+                        <div class="field">
+                            <input type="text" id="payment-type" readonly value="cartão de crédito">
+                            <label for="payment-type">Forma de pagamento</label>
+                        </div>
+
+                        <div class="field">
+                            <input type="text" name="card-number" id="card-number" readonly value="****0604">
+                            <label for="card-number">Cartão terminado em</label>
+                        </div>
+
+                        <div class="field">
+                            <input type="text" name="parcels" id="parcels" readonly value="à vista">
+                            <label for="parcels">Parcelas em</label>
+                        </div>
+
+                        <div class="field">
+                            <input type="text" name="parcels" id="parcels" readonly value="1">
+                            <label for="parcels">Quantidade de serviços</label>
+                        </div>
+
+                        <div class="field">
+                            <input type="text" name="date" id="date" readonly value=" 23 de julho de 2020 às 9:00">
+                            <label for="date">Data do serviço</label>
+                        </div>
+
+                        <div class="field">
+                            <input type="text" name="password" id="card-number" readonly value="R$ 400,00">
+                            <label for="card-number">Valor total</label>
+                        </div>
+
+                    </form>
 
                 </div>
 
-                <ul class="weekdays">
-                    <li>Dom</li>
-                    <li>Seg</li>
-                    <li>Ter</li>
-                    <li>Qua</li>
-                    <li>Qui</li>
-                    <li>Sex</li>
-                    <li>Sáb</li>
-                </ul>
-
-                <ul class="days">
-                    <li class="month-prev">28</li>
-                    <li class="month-prev">29</li>
-                    <li class="month-prev">30</li>
-                    <li>1</li>
-                    <li class="active">2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                    <li>6</li>
-                    <li>7</li>
-                    <li>8</li>
-                    <li>9</li>
-                    <li class="selected">10</li>
-                    <li>11</li>
-                    <li>12</li>
-                    <li>13</li>
-                    <li>14</li>
-                    <li>15</li>
-                    <li>16</li>
-                    <li>17</li>
-                    <li>18</li>
-                    <li>19</li>
-                    <li>20</li>
-                    <li>21</li>
-                    <li>22</li>
-                    <li>23</li>
-                    <li>24</li>
-                    <li>25</li>
-                    <li>26</li>
-                    <li>27</li>
-                    <li>28</li>
-                    <li>29</li>
-                    <li>30</li>
-                    <li>31</li>
-                    <li class="month-next">1</li>
-                </ul>
-
-            </div>
-
-            <form action="schedules-time-options.html">
-
                 <footer class="fixed">
-
-                    <a href="index.html">Voltar</a>
+                    <a href="schedules-payment.html">Voltar</a>
                     <button type="submit">Continuar</button>
-
                 </footer>
+
             </form>
 
         </main>
+
+        <aside class="open">
+
+            <header>Resumo</header>
+
+            <section>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Alinhamento</td>
+                            <td class="price">R$ 0,00</td>
+                        </tr>
+                        <tr>
+                            <td>Alinhamento</td>
+                            <td class="price">R$ 0,00</td>
+                        </tr>
+                        <tr>
+                            <td>Alinhamento</td>
+                            <td class="price">R$ 0,00</td>
+                        </tr>
+                        <tr>
+                            <td>Alinhamento</td>
+                            <td class="price">R$ 0,00</td>
+                        </tr>
+                        <tr>
+                            <td>Alinhamento</td>
+                            <td class="price">R$ 0,00</td>
+                        </tr>
+                        <tr>
+                            <td>Alinhamento</td>
+                            <td class="price">R$ 0,00</td>
+                        </tr>
+                        <tr>
+                            <td>Alinhamento</td>
+                            <td class="price">R$ 0,00</td>
+                        </tr>
+                        <tr>
+                            <td>Alinhamento</td>
+                            <td class="price">R$ 0,00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <footer>
+                <button type="button" id="btn-summary-toggle"><svg xmlns="http://www.w3.org/2000/svg" width="64.317"
+                        height="64.317" viewBox="0 0 64.317 64.317">
+                        <path d="M0,0H64.317V64.317H0Z" fill="none" />
+                        <path d="M9.779,27.858l12.3-12.274,12.3,12.274,3.779-3.779L22.079,8,6,24.079Z"
+                            transform="translate(10.079 13.439)" /></svg>
+                </button>
+
+                <div>
+                    <span>Total</span>
+                    <span class="total">R$ 0,00</span>
+                </div>
+            </footer>
+
+        </aside>
 
     </section>
 

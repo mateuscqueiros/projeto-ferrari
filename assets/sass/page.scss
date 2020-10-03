@@ -4,15 +4,14 @@ header {
         flex-direction: column;
         align-items: flex-start;
         width: 100%;
-
         h1, h2, h3, h4, h5, h6 {
             color: var(--green);
             margin: 0;
-            font-size: 32px;
+            font-size: 23px;
             font-weight: 600;
         }
         hr {
-            width: 68px;
+            width:68px;
             border: none;
             border-top: 4px solid var(--red);
             margin: 10px 0;
@@ -24,12 +23,85 @@ header {
     flex-direction: column;
     height: calc(100vh - 140px);
     overflow: auto;
-
+    aside {
+        width: 100%;
+        position: fixed;
+        z-index: 2;
+        right: 0;
+        bottom: 80px;
+        height: 50px;
+        background-color: var(--gray-12);
+        border-bottom: var(--gray-3) 1px solid;
+        flex-direction: column;
+        transition: all .2s ease-in-out;
+        header {
+            font-size: 32px;
+            color: var(--dark-0);
+            height: 130px;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+        section {
+            padding: 0 var(--space);
+            display: none;
+            flex: 1;
+            max-height: calc(100vh - 339px);
+            overflow-y: auto;
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                border-bottom: var(--gray-3) 1px solid;
+                td {
+                    padding: var(--space) 0;
+                    border-top: var(--gray-3) 1px solid;
+                    &.price {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+        footer {
+            height: 50px;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space);
+            font-size: 18px;
+            color: var(--dark-0);
+            .total {
+                font-weight: bold;
+                margin-left: var(--space);
+                text-align: right;
+            }
+            button {
+                @include button;
+                min-width: 50px;
+                width: 50px;
+                svg {
+                    transform: rotate(0deg);
+                    transition: all .3s ease-in-out;
+                }
+            }
+        }
+        &.open {
+            height: calc(100vh - 158px);
+            header, section {
+                display: flex;
+            }
+            footer {
+                button {
+                    svg {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
     .page-title {
         margin: var(--space);
         width: calc(100% - calc(var(--space) * 2));
     }
-
     > header {
         width: 100%;
         min-height: 130px;
@@ -38,23 +110,25 @@ header {
         justify-content: center;
         align-items: center;
         margin-top: 18px;
-
         h1 {
             font-size: 23px;
             font-weight: bold;
             text-transform: uppercase;
+            small {
+                font-size: 14px;
+                font-weight: 600;
+                display: block;
+            }
         }
     }
     > main {
         margin-bottom: 80px;
         flex-direction: column;
-
         .toast {
             position: fixed;
             bottom: 0;
             left: 0;
             z-index: 3;
-
             &.open {
                 transform: translateY(-80px);
             }
@@ -71,14 +145,12 @@ header {
         align-items: center;
         padding: var(--space);
         z-index: 4;
-
         button, a {
-            @include button-gray
+            @include button-gray;
         }
-
-        button[type="submit"], a.black {
-            @include button-black
-        } 
+        button[type=submit], a.black {
+            @include button-black;
+        }
     }
     &.blue {
         > header {
@@ -86,43 +158,73 @@ header {
         }
         footer.fixed {
             button[type=submit], a.black {
-                @include button-blue
+                @include button-blue;
             } 
         }
     }
-
     &.green {
         > header {
             background-color: var(--green);
         }
         footer.fixed {
             button[type=submit], a.black {
-                @include button-green
+                @include button-green;
             } 
         }
     }
 }
 
 @media (min-width: 1200px) {
+    header {
+        &.page-title {
+            h1, h2, h3, h4, h5, h6 {
+                font-size: 30px;
+            }
+        }
+    }
     .page {
+        aside, aside.open {
+            width: 375px;
+            height: calc(100vh - 118px);
+            bottom: 0;
+            z-index: 4;
+            header, section {
+                display: flex;
+            }
+            header {
+                height: 160px;
+            }
+            footer {
+                height: 80px;
+                > div {
+                    width: 100%;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 22px;
+                    .total {
+                       font-size: 29px; 
+                    }
+                }
+                button {
+                    display: none;
+                }
+            }
+        }
         > header {
             justify-content: flex-start;
-            min-height: 160px;
             padding-left: 185px;
+            min-height: 160px;
             h1 {
                 font-size: 32px;
             }
         }
         footer.fixed {
             justify-content: flex-start;
-
-            button + button, a + button, a + a, button + a {
-                margin-left: var(--space);
+            button + button, a + a, button + a, a + button {
+                margin-right: var(--space);
             }
-
             button, a {
                 order: 1;
-
                 &:first-child {
                     order: 2;
                 }
